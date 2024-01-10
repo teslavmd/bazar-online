@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f0f0f0;
+    font-family: sans-serif;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.container{
+    width: 50%;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+/* price */
+
+.initial-price{
+    font-size: .8rem;
+    font-weight: 400;
+    text-decoration: line-through;
+    opacity: .6;
+}
+
+.discount{
+    font-size: .7rem;
+    font-weight: 700;
+    color: #00bc09;
+}

@@ -1,0 +1,41 @@
+<div class="container">
+    <app-navbar></app-navbar>
+    <article class="product-view">
+        <section class="product-gallery">
+            <div class="big-img">
+                <img src="{{productFound.images[selected]}}" alt="">
+            </div>
+            <div class="list-img">
+                <img 
+                    *ngFor="let img of productFound.images; index as i"
+                    src="{{img}}" 
+                    alt="{{productFound.title}}" 
+                    [ngClass]="selected == i ? 'small-img selected' : 'small-img'"
+                    (click)="changeImgSelected(i)"
+                    >
+            </div>
+        </section>
+        <hr>
+        <section class="product-info">
+            <span class="product-categ"><i>categoría : {{productFound.category}}</i></span>
+            <h2 class="product-title">
+                {{productFound.title}} - {{productFound.brand}}
+                <br>
+                <span class="initial-price">{{ productFound.price | currency}}</span>
+                <br>
+                <span class="final-price"><b>{{ productFound.price - ((productFound.discountPercentage / 100) * productFound.price)  | currency}}</b> <span class="discount"> {{productFound.discountPercentage}}% OFF </span></span>
+            </h2> 
+            <p class="product-desc">{{productFound.description}}</p>
+            <span class="product-stock">{{productFound.stock}} disponibles</span>
+        </section>
+        <section class="product-buttons">
+            <button class="button add">Agregar al carrito</button>
+            <button class="button buy">Comprar ahora</button>
+        </section>
+    </article>
+    <hr>
+    <article>
+        <app-similar-products></app-similar-products>
+    </article>
+</div>
+

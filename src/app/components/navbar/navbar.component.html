@@ -1,0 +1,11 @@
+<nav class="product-nav">
+    <div class="search-box">
+        <img src="../../../assets/logo.png" routerLink="/home" alt="" class="search-banner">
+    <div class="input-container">
+        <input type="search" class="search-input" placeholder="laptops, smartphones, etc..." [(ngModel)]="searchParam" (keypress)="searchProductWEnter($event)">
+        <img src="../../../assets/svg/search.svg" class="search-svg" alt="search">
+    </div>
+        <button class="search-button" [routerLink]="['/items']" [queryParams]="{search : searchParam}" (click)="searchProduct(searchParam)" >Buscar</button>
+    </div>
+    <!-- <h3 class="product-results">Resultados de busqueda para '{{staticValueSearch}}' : {{listLenght}}</h3> -->
+</nav>
