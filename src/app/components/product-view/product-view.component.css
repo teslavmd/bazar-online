@@ -105,3 +105,32 @@
 .buy:hover{
     background-color: #0dae5b;
 }
+
+@media screen and (max-width : 600px) {
+    
+    .product-gallery{
+        flex-direction: column;
+    }
+
+    .big-img{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .big-img img{
+        width: 100%
+    }
+
+    .list-img{
+        margin-top: 20px;
+        flex-flow: row wrap;
+    }
+
+    .small-img{
+        height: 60px;
+        width: 60px;
+        margin-right: 5px;
+        margin-bottom: 0;
+    }
+
+}

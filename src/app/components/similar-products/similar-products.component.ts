@@ -3,12 +3,14 @@ import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
+import { CardProductComponent } from '../card-product/card-product.component';
 
 @Component({
   selector: 'app-similar-products',
   standalone: true,
   imports: [
     CommonModule,
+    CardProductComponent
 
   ],
   templateUrl: './similar-products.component.html',
@@ -46,15 +48,5 @@ export class SimilarProductsComponent implements OnInit{
   }
 
 
-  navigateToProduct(id : number, category : string) : void {  
-    this.router.navigate(
-      ['/product/' + id],
-      {
-        queryParams : {
-          category
-        }
-      }).then(() =>  location.reload() )
-      
-  }
 
 }

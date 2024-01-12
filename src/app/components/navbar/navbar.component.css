@@ -1,17 +1,16 @@
 .product-nav{
     margin: 20px 0 40px;
+    width: 100%;
+
 }
 
-.product-results{
-    text-align: center;
-}
 
 .search-box{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;    
-
+    align-items: center; 
+    margin: 0 auto;
 }
 
 .search-banner{
@@ -56,4 +55,35 @@
 
 .search-button:hover{
     border: none;
+}
+
+@media screen and (max-width : 600px) {
+    .search-box{
+        justify-content: space-evenly;
+    }
+    
+    .search-banner{
+        width: 60px;
+        height: 60px;
+    }
+
+    .search-input{
+        width: 90%;
+        font-size: 1rem;
+        padding: 10px;
+        margin: 0 10px;
+    }
+
+    .search-button{
+        height: 35px;
+        padding: 5px 15px;
+        font-size: .8rem;
+    }
+
+    .search-svg{
+        width: 20px;
+        top: 10px;
+        right: 25px;
+    }    
+
 }

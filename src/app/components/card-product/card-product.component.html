@@ -1,0 +1,13 @@
+<article *ngFor="let product of list" class="product-card">
+    <div class="product-img">
+        <img src="{{product.thumbnail}}" alt="{{product.title}}" class="product-thumbnail" >
+    </div>
+    <div class="product-info">
+        <h3>{{product.title}}</h3>
+        <p>{{product.description}}</p>
+        <span class="initial-price">{{ product.price | currency}}</span>
+        <br>
+        <span class="final-price"><b>{{ product.price - ((product.discountPercentage / 100 ) * product.price)  | currency}}</b> <span class="discount"> {{product.discountPercentage}}% OFF </span></span>
+    </div>
+    <div (click)="navigateToProduct(product.id, product.category)" class="product-view__link"></div>
+</article>

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { CardProductComponent } from '../card-product/card-product.component';
 
 @Component({
   selector: 'app-product-list',
@@ -13,6 +14,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
     FormsModule,
     RouterLink,
     NavbarComponent,
+    CardProductComponent
   ],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
@@ -28,16 +30,5 @@ export class ProductListComponent{
     this.listProducts = list;
   }
 
-  navigateToProduct(id : number, category : string) : void {
-    
-      console.log(['/product/'+id])
-    this.router.navigate(
-      ['/product/' + id],
-      {
-        queryParams : {
-          category
-        }
-      })
-  }
 
 }
